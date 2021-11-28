@@ -1,0 +1,29 @@
+/*----------- Header y footer--------------*/
+body{
+    background-image: url(../img/fondostore1.jpg);
+}
+.btn-white{
+    color: white !important;
+}
+.btn-white:hover{
+    
+    color: black!important;
+}
+
+/*----------- Header y footer--------------*/
+
+.boton{
+    width: 17%;
+    margin: 5px 180px;
+    background: linear-gradient(to right, #3595df ,#3962df );
+    color: white;
+}
+
+.diseño1{
+    color: white;
+    align-items: center;
+}
+.cantidad_carro{
+    width: 1px;
+    height: 1px;
+}
