@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PlayerstoreApplication<playerstore>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "co.edu.unab.playerstore.PlayerstoreApplication",
+            "projectName": "playerstore",
+            "args": ""
+        }
+    ]
+}
