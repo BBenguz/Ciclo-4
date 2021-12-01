@@ -9,6 +9,25 @@
             "mainClass": "co.edu.unab.playerstore.PlayerstoreApplication",
             "projectName": "playerstore",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PlayerstoreApplication",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "co.edu.unab.playerstoreconection.PlayerstoreApplication",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PlayerstoreApplication<playerstoreconection>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "co.edu.unab.playerstoreconection.PlayerstoreApplication",
+            "projectName": "playerstoreconection",
+            "args": ""
         }
     ]
 }

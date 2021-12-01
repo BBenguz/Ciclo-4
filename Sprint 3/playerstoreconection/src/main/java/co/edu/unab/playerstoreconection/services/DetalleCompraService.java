@@ -1,4 +1,4 @@
-package co.edu.unab.playerstore.services;
+package co.edu.unab.playerstoreconection.services;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import co.edu.unab.playerstore.models.DetalleCompraModel;
-import co.edu.unab.playerstore.repositories.DetalleCompraRepository;
+import co.edu.unab.playerstoreconection.models.DetalleCompraModel;
+import co.edu.unab.playerstoreconection.repositories.DetalleCompraRepository;
 
 
 @Service

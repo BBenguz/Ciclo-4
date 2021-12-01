@@ -1,14 +1,17 @@
-package co.edu.unab.playerstore.services;
+package co.edu.unab.playerstoreconection.services;
 
 import java.util.ArrayList;
+
 import java.util.Optional;
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-import co.edu.unab.playerstore.models.UsuarioModel;
-import co.edu.unab.playerstore.repositories.UsuarioRepository;
+import co.edu.unab.playerstoreconection.models.UsuarioModel;
+import co.edu.unab.playerstoreconection.repositories.UsuarioRepository;
 
 @Service
 public class UsuarioService {
@@ -36,6 +39,15 @@ public class UsuarioService {
     public Optional<UsuarioModel> obtenerUsuarioPorId(Long id){
         return usuarioRepository.findById(id);
     }
+
+    public ArrayList<UsuarioModel> obtenerUsuarioPorNombre(String nombre){
+        return  (ArrayList<UsuarioModel>) usuarioRepository.findByNombre(nombre);
+    }
+
+    public ArrayList<UsuarioModel> obtenerUsuarioPorCorreo(String correo){
+        return (ArrayList<UsuarioModel>)usuarioRepository.findByCorreo(correo);
+    }
+    
 
     
     

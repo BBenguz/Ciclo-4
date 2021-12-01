@@ -1,4 +1,4 @@
-package co.edu.unab.playerstore.controllers;
+package co.edu.unab.playerstoreconection.controllers;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.edu.unab.playerstore.models.DetalleCompraModel;
-import co.edu.unab.playerstore.services.DetalleCompraService;
+import co.edu.unab.playerstoreconection.models.DetalleCompraModel;
+import co.edu.unab.playerstoreconection.services.DetalleCompraService;
 
 @RestController
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET,RequestMethod.POST})
