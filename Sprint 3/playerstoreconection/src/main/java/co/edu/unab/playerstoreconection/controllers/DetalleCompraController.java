@@ -15,7 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.unab.playerstoreconection.models.DetalleCompraModel;
+import co.edu.unab.playerstoreconection.models.ProductoModel;
+import co.edu.unab.playerstoreconection.models.UsuarioModel;
 import co.edu.unab.playerstoreconection.services.DetalleCompraService;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET,RequestMethod.POST})
@@ -51,4 +55,23 @@ public class DetalleCompraController {
     public Optional<DetalleCompraModel>obtenerDetalleCompraPorId(@PathVariable("id") Long id ){
         return this.detalleCompraService.obtenerDetalleCompraPorId(id);
     }
+
+
+    //corregir la busqueda por usuario y producto (PENDIENTE)
+
+    @GetMapping("/usuario")
+    public ArrayList<DetalleCompraModel> obtenerDetalleCompraPorUsuario(@RequestParam("usuario") UsuarioModel usuario) {
+        return this.detalleCompraService.obtenerDetalleCompraPorUsuario(usuario);
+    }
+
+    @GetMapping("/producto")
+    public ArrayList<DetalleCompraModel> obtenerDetallerCompraPorProducto(@RequestParam("producto") ProductoModel producto) {
+        return this.detalleCompraService.obtenerDetallerCompraPorProducto(producto);
+    }
+    
+    @GetMapping("/ciudad")
+    public ArrayList<DetalleCompraModel> obtenerDetallerCompraPorCiudad(@RequestParam("ciudad") String ciudad) {
+        return this.detalleCompraService.obtenerDetallerCompraPorCiuddad(ciudad);
+    }
+    
 }

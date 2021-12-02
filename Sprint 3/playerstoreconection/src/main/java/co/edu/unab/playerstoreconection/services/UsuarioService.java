@@ -44,6 +44,10 @@ public class UsuarioService {
         return  usuarioRepository.findByNombre(nombre);
     }
 
+    public ArrayList <UsuarioModel> obtenerUsuarioPorApellidos(String apellidos){
+        return usuarioRepository.findByApellidos(apellidos);
+    }
+
     public ArrayList <UsuarioModel> obtenerUsuarioPorCorreo(String correo){
         return usuarioRepository.findByCorreo(correo);
     }

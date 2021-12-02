@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.edu.unab.playerstoreconection.models.DetalleCompraModel;
+import co.edu.unab.playerstoreconection.models.ProductoModel;
+import co.edu.unab.playerstoreconection.models.UsuarioModel;
 import co.edu.unab.playerstoreconection.repositories.DetalleCompraRepository;
 
 
@@ -38,4 +40,18 @@ public class DetalleCompraService {
     public Optional<DetalleCompraModel> obtenerDetalleCompraPorId(Long id){
         return detallecompraRepository.findById(id);
     }
+
+    public ArrayList<DetalleCompraModel> obtenerDetalleCompraPorUsuario(UsuarioModel usuario){
+        return detallecompraRepository.findByUsuario(usuario);
+    }
+
+    public ArrayList<DetalleCompraModel> obtenerDetallerCompraPorProducto(ProductoModel producto){
+        return detallecompraRepository.findByProducto(producto);
+    }
+
+    public ArrayList<DetalleCompraModel> obtenerDetallerCompraPorCiuddad(String ciudad){
+        return detallecompraRepository.findByCiudad(ciudad);
+    }
+
+
 }

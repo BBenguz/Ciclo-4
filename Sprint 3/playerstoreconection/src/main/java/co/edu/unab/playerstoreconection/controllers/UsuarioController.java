@@ -70,6 +70,11 @@ public class UsuarioController {
         return this.usuarioService.obtenerUsuarioPorNombre(nombre);
     }
 
+    @GetMapping("/apellidos")
+    public ArrayList<UsuarioModel> obtenerUsuarioPorApellidos(@RequestParam("apellidos") String apellidos){
+        return this.usuarioService.obtenerUsuarioPorApellidos(apellidos);
+    }    
+
     @GetMapping("/correo")
     public ArrayList<UsuarioModel>obtenerUsuarioPorCorreo(@RequestParam("correo") String correo){
         return this.usuarioService.obtenerUsuarioPorCorreo(correo);

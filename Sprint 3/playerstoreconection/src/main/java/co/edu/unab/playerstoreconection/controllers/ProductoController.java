@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.unab.playerstoreconection.models.ProductoModel;
@@ -51,5 +52,17 @@ public class ProductoController {
     public Optional<ProductoModel>obtenerProductoPorId(@PathVariable("id") Long id ){
         return this.productoService.obtenerProductoPorId(id);
     }
+
+    @GetMapping("/nombre")
+    public ArrayList<ProductoModel>obtenerProductoPorNombre(@RequestParam("nombre") String nombre){
+        return this.productoService.obtenerProductoPorNombre(nombre);
+    }
+
+    @GetMapping("/costo")
+    public ArrayList<ProductoModel>obtenerProductoPorCosto(@RequestParam("costo") Integer costo){
+        return this.productoService.obtenerProductoPorCosto(costo);
+    }
+
+
     
 }

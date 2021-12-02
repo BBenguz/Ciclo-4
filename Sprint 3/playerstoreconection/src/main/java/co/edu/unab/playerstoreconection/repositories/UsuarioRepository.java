@@ -5,15 +5,17 @@ import java.util.ArrayList;
 
 
 import org.springframework.data.mongodb.repository.MongoRepository;
-//import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Repository;
 
 import co.edu.unab.playerstoreconection.models.UsuarioModel;
 
-
+@Repository
 public interface UsuarioRepository extends MongoRepository<UsuarioModel , Long>{
 
    public abstract ArrayList <UsuarioModel> findByNombre(String nombre);
-    
+
+   public abstract ArrayList <UsuarioModel> findByApellidos(String apellidos);
+
    public abstract ArrayList <UsuarioModel> findByCorreo(String correo);
   
    

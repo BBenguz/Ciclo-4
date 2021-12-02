@@ -37,4 +37,12 @@ public class ProductoService {
     public Optional<ProductoModel> obtenerProductoPorId(Long id){
         return productoRepository.findById(id);
     }
+
+    public ArrayList <ProductoModel> obtenerProductoPorNombre(String nombre){
+        return  productoRepository.findByNombre(nombre);
+    }
+
+    public ArrayList <ProductoModel> obtenerProductoPorCosto(Integer costo){
+        return productoRepository.findByCosto(costo);
+    }
 }
