@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.unab.playerstoreconection.models.UsuarioModel;
@@ -65,13 +66,13 @@ public class UsuarioController {
 
     //Encontrar el error! tododos los get funcionan pero independientes cuando se coploca el "path"
     // correctamente sale un error en el postman  
-    @GetMapping(path = "/{nombre}")
-    public ArrayList<UsuarioModel>obtenerUsuarioPorNombre(@PathVariable("nombre") String nombre){
+    @GetMapping("/nombre")
+    public ArrayList<UsuarioModel>obtenerUsuarioPorNombre(@RequestParam("nombre") String nombre){
         return this.usuarioService.obtenerUsuarioPorNombre(nombre);
     }
 
-    @GetMapping(path = "/e")
-    public ArrayList<UsuarioModel>obtenerUsuarioPorCorreo(@PathVariable("correo") String correo){
+    @GetMapping("/correo")
+    public ArrayList<UsuarioModel>obtenerUsuarioPorCorreo(@RequestParam("correo") String correo){
         return this.usuarioService.obtenerUsuarioPorCorreo(correo);
     }
 

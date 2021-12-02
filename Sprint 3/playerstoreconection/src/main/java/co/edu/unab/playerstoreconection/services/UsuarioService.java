@@ -40,12 +40,12 @@ public class UsuarioService {
         return usuarioRepository.findById(id);
     }
 
-    public ArrayList<UsuarioModel> obtenerUsuarioPorNombre(String nombre){
-        return  (ArrayList<UsuarioModel>) usuarioRepository.findByNombre(nombre);
+    public ArrayList <UsuarioModel> obtenerUsuarioPorNombre(String nombre){
+        return  usuarioRepository.findByNombre(nombre);
     }
 
-    public ArrayList<UsuarioModel> obtenerUsuarioPorCorreo(String correo){
-        return (ArrayList<UsuarioModel>)usuarioRepository.findByCorreo(correo);
+    public ArrayList <UsuarioModel> obtenerUsuarioPorCorreo(String correo){
+        return usuarioRepository.findByCorreo(correo);
     }
     
 
