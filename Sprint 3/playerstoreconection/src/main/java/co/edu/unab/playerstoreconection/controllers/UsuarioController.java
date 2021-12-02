@@ -64,8 +64,7 @@ public class UsuarioController {
         return this.usuarioService.obtenerUsuarioPorId(id);
     }
 
-    //Encontrar el error! tododos los get funcionan pero independientes cuando se coploca el "path"
-    // correctamente sale un error en el postman  
+    
     @GetMapping("/nombre")
     public ArrayList<UsuarioModel>obtenerUsuarioPorNombre(@RequestParam("nombre") String nombre){
         return this.usuarioService.obtenerUsuarioPorNombre(nombre);
