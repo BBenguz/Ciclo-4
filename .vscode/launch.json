@@ -28,6 +28,16 @@
             "mainClass": "co.edu.unab.playerstoreconection.PlayerstoreApplication",
             "projectName": "playerstoreconection",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-playerstorereact<playerstorereact>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "co.edu.unab.playerstorereact.playerstorereact",
+            "projectName": "playerstorereact",
+            "args": ""
         }
     ]
 }

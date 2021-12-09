@@ -18,7 +18,7 @@ import co.edu.unab.playerstoreconection.models.DetalleCompraModel;
 import co.edu.unab.playerstoreconection.models.ProductoModel;
 import co.edu.unab.playerstoreconection.models.UsuarioModel;
 import co.edu.unab.playerstoreconection.services.DetalleCompraService;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
@@ -59,18 +59,18 @@ public class DetalleCompraController {
 
     //corregir la busqueda por usuario y producto (PENDIENTE)
 
-    @GetMapping("/usuario")
-    public ArrayList<DetalleCompraModel> obtenerDetalleCompraPorUsuario(@RequestParam("usuario") UsuarioModel usuario) {
+    @GetMapping(path = "/usuario/{usuario}")
+    public ArrayList<DetalleCompraModel> obtenerDetalleCompraPorUsuario(@PathVariable("usuario") UsuarioModel usuario) {
         return this.detalleCompraService.obtenerDetalleCompraPorUsuario(usuario);
     }
 
-    @GetMapping("/producto")
-    public ArrayList<DetalleCompraModel> obtenerDetallerCompraPorProducto(@RequestParam("producto") ProductoModel producto) {
+    @GetMapping(path = "/producto/{producto}")
+    public ArrayList<DetalleCompraModel> obtenerDetallerCompraPorProducto(@PathVariable("producto") ProductoModel producto) {
         return this.detalleCompraService.obtenerDetallerCompraPorProducto(producto);
     }
     
-    @GetMapping("/ciudad")
-    public ArrayList<DetalleCompraModel> obtenerDetallerCompraPorCiudad(@RequestParam("ciudad") String ciudad) {
+    @GetMapping(path = "/ciudad/{ciudad}")
+    public ArrayList<DetalleCompraModel> obtenerDetallerCompraPorCiudad(@PathVariable("ciudad") String ciudad) {
         return this.detalleCompraService.obtenerDetallerCompraPorCiuddad(ciudad);
     }
     

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.unab.playerstoreconection.models.UsuarioModel;
@@ -65,18 +65,18 @@ public class UsuarioController {
     }
 
     
-    @GetMapping("/nombre")
-    public ArrayList<UsuarioModel>obtenerUsuarioPorNombre(@RequestParam("nombre") String nombre){
+    @GetMapping(path = "/nombre/{nombre}")
+    public ArrayList<UsuarioModel>obtenerUsuarioPorNombre(@PathVariable("nombre") String nombre){
         return this.usuarioService.obtenerUsuarioPorNombre(nombre);
     }
 
-    @GetMapping("/apellidos")
-    public ArrayList<UsuarioModel> obtenerUsuarioPorApellidos(@RequestParam("apellidos") String apellidos){
+    @GetMapping(path = "/apellidos/{apellidos}")
+    public ArrayList<UsuarioModel> obtenerUsuarioPorApellidos(@PathVariable("apellidos") String apellidos){
         return this.usuarioService.obtenerUsuarioPorApellidos(apellidos);
     }    
 
-    @GetMapping("/correo")
-    public ArrayList<UsuarioModel>obtenerUsuarioPorCorreo(@RequestParam("correo") String correo){
+    @GetMapping(path = "/correo/{correo}")
+    public ArrayList<UsuarioModel>obtenerUsuarioPorCorreo(@PathVariable("correo") String correo){
         return this.usuarioService.obtenerUsuarioPorCorreo(correo);
     }
 
