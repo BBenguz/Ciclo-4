@@ -48,11 +48,12 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/logo\ .jpg); 
+    background-image: url(logo\ .jpg); 
     background-size: cover; 
     background-attachment: fixed;
     background-position: center;    
 }
+
 
 .form-control{
     width: 200px;
